@@ -1,0 +1,40 @@
+<div class="space-xl"></div>
+<div class="grid-3-center">
+    <div class="col-2"></div>
+    <div class="col-5">
+        <mat-card>
+            <mat-card-header>
+              <mat-card-title>
+                  <i class="material-icons pad-5">assignment_ind</i>
+                  <b class="inline">Register</b>
+              </mat-card-title>
+            </mat-card-header>
+            <div class="space"></div>
+            <div class="form-container pad-15">
+                <mat-form-field>
+                    <input matInput placeholder="Register your email" [(ngModel)]="registerUserData.email" name="email" [type]="'email'" required>
+                </mat-form-field>
+                <mat-form-field>
+                        <input matInput placeholder="Register your password" [(ngModel)]="registerUserData.password" [type]="hide ? 'password' : 'text'" required>
+                        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </mat-form-field>
+                <mat-card-subtitle class="example-button-row">
+                <div class="space"></div>
+                <div class="grid-3">
+                  <div class="col-10"></div>
+                  <div class="col-1">
+                        <button  type="submit" mat-fab color="accent" (click)="registerUser()">
+                          <mat-icon>send</mat-icon>
+                      </button>
+                  </div>
+                  <div class="col-1"></div>
+                </div>
+                </mat-card-subtitle>
+            </div>
+        </mat-card>
+    </div>
+    <div class="col-2"></div>
+</div>
+
+
+ 
